@@ -1,0 +1,1 @@
+"From:" + [FROMLEFTA]  & " To:" & [TOLEFTA] & "||" & "From:" + [FROMRIGHTA]  & " To:" & [TORIGHTA] 
