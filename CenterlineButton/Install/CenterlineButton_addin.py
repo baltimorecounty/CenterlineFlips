@@ -22,11 +22,6 @@ class SwapCenterlines(object):
 		# flips the line direction
 		arcpy.FlipLine_edit("FACILITIES.Centerline")
 
-		# searches for the cursors to verify the correct data is selected
-		with arcpy.da.SearchCursor(fc, fields) as cursor:
-			for row in cursor:
-				print 'FROMLEFTP = {0} ... TORIGHTP = {1}\nTOLEFTP = {2} ... FROMRIGHTP = {3}\nFROMLEFTA = {4} ... TORIGHTA = {5}\nTOLEFTA = {6} ... FROMRIGHTA = {7}'.format(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7])
-
 		# loops through selected rows and swaps the values
 		with arcpy.da.UpdateCursor(fc, fields) as cursor:
 			for row in cursor:
