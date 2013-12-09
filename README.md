@@ -21,7 +21,7 @@ The tool developed by @talllguy for the task flips the centerline, and then swap
 
 ### Installation
 
-1. Download the latest release in this repository
+1. [Download the latest release](https://github.com/baltimorecounty/CenterlineFlips/releases/latest) in this repository
 2. Uncompress and execute the add-in
 3. A toolbar will be added to ArcMap
 4. Start an editing session
