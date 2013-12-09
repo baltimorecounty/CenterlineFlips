@@ -18,7 +18,7 @@ The tool developed by @talllguy for the task flips the centerline, and then swap
 **Requirements**
 - Built and tested in ArcGIS 10.2
 - ArcMap 10.2
-- Centerline layer named `FACILITIES.Centerline`
+- Centerline layer named "FACILITIES.Centerline"
 
 1. Download the latest release in this repository
 2. Uncompress and execute the add-in
