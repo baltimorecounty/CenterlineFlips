@@ -13,12 +13,13 @@ Centerlines that have descending addresses need to be flipped, and have their at
 
 The tool developed by @talllguy for the task flips the centerline, and then swaps all eight attributes, in one click. The base scripts are in the /scripts directory, and the tool is in the CenterlineButton directory.
 
-### Installation
+### Requirements
 
-**Requirements**
 - Built and tested in ArcGIS 10.2
 - ArcMap 10.2
 - Centerline layer named "FACILITIES.Centerline"
+
+### Installation
 
 1. Download the latest release in this repository
 2. Uncompress and execute the add-in
