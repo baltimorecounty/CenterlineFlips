@@ -17,7 +17,10 @@ The tool developed by @talllguy for the task flips the centerline, and then swap
 
 - Built and tested in ArcGIS 10.2
 - ArcMap 10.2
+- Editing privileges
 - Centerline layer named "FACILITIES.Centerline"
+- SDE connection named: "5160Facilities.sde"
+
 
 ### Installation
 
