@@ -11,7 +11,7 @@ Centerlines that have descending addresses need to be flipped, and have their at
 
 ## Tool
 
-The tool developed by @talllguy for the task flips the centerline, and then swaps all eight attributes, in one click. The base scripts are in the /scripts directory, and the tool is in the CenterlineButton directory.
+The tool developed to flip the centerline, and then swap all eight attributes in one click. The base scripts are in the /scripts directory, and the tool is in the /CenterlineButton directory.
 
 ### Requirements
 
