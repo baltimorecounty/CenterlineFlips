@@ -34,3 +34,6 @@ with arcpy.da.UpdateCursor(fc, fields) as cursor:
         row[6], row[7] = row[7], row[6]
 
         cursor.updateRow(row)
+
+# Marked the discrepancy as done in the CENTERLINE_FLIPS tracking shapefile
+arcpy.CalculateField_management("CENTERLINE_FLIPS","FLIP",'1')
