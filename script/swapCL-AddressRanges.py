@@ -7,7 +7,7 @@
 import arcpy
 
 # set workspace to SDE connection
-workspace = r"Database Connections\5160Facilities.sde"
+workspace = r"Database Connections\facilities@5160_93.sde"
 
 # set the fields to the ones being flipped
 fields = (["FROMLEFTP", "TORIGHTP", "TOLEFTP", "FROMRIGHTP",
