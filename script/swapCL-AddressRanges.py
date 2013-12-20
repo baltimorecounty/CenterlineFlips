@@ -10,8 +10,8 @@ import arcpy
 workspace = r"Database Connections\facilities@5160_93.sde"
 
 # set the fields to the ones being flipped
-fields = (["FROMLEFTP", "TORIGHTP", "TOLEFTP", "FROMRIGHTP",
-           "FROMLEFTA", "TORIGHTA", "TOLEFTA", "FROMRIGHTA",])
+fields = (["FROMLEFTP", "TORIGHTP", "TOLEFTP", "FROMRIGHTP", "FROMLEFTA",
+		   "TORIGHTA", "TOLEFTA", "FROMRIGHTA", "TRAFFIC_FLOW"])
 
 # set the feature class to the SDE feature class name
 # use ListFeatureClasses ({wild_card}, {feature_type}, {feature_dataset})
@@ -27,11 +27,17 @@ fc = "FACILITIES.Centerline"
 # loops through selected rows and swaps the values
 with arcpy.da.UpdateCursor(fc, fields) as cursor:
     for row in cursor:
-
+		# update swaps
         row[0], row[1] = row[1], row[0]
         row[2], row[3] = row[3], row[2]
         row[4], row[5] = row[5], row[4]
         row[6], row[7] = row[7], row[6]
+		
+		# swap directions
+		if row[8] == 'F':
+			row[8] = 'R'
+		elif row[8] == 'R':
+			row[8] = 'F'
 
         cursor.updateRow(row)
 
