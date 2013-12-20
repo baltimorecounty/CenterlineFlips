@@ -17,15 +17,24 @@ The tool developed to flip the centerline, and then swap all eight attributes in
 
 - Built and tested in ArcGIS 10.2
 - ArcMap 10.2
+- Windows
 - Editing privileges
 - Centerline layer named "FACILITIES.Centerline"
 - SDE connection named: "5160Facilities.sde"
 
+### Features
+
+- Executes all steps of flipping street centerline in one click!
+- Flips the direction of the centerline feature class
+- Swaps the address range attributes from the left to right side, and reorders them.
+- Swaps both actual and potential ranges
+- Changes the direction (one way) if set
+- Updates the change tracking shapefile that centerline is flipped
 
 ### Installation
 
-1. [Download the latest release](https://github.com/baltimorecounty/CenterlineFlips/releases/latest) in this repository
-2. Uncompress and execute the add-in
+1. [Download the latest release](https://github.com/baltimorecounty/CenterlineFlips/releases/latest)
+2. Execute the .esriaddin file
 3. A toolbar will be added to ArcMap
 4. Start an editing session
 5. Select the centerline to be flipped
