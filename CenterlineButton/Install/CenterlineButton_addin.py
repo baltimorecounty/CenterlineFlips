@@ -29,6 +29,9 @@ class SwapCenterlines(object):
 				# loops through selected rows and swaps the values
 				with arcpy.da.UpdateCursor(fc, fields) as cursor:
 					for row in cursor:
+						# flips the line direction
+						arcpy.FlipLine_edit("FACILITIES.Centerline")
+						
 						# update swaps
 						row[0], row[1] = row[1], row[0]
 						row[2], row[3] = row[3], row[2]
@@ -46,6 +49,7 @@ class SwapCenterlines(object):
 							cursor.updateRow(row)
 
 			else:
+				# this is not working at the moment
 				arcpy.AddError("Error. No {0} features are selected.".format(fc_shp))
 				print(arcpy.GetMessages())
 		except Exception as e:
