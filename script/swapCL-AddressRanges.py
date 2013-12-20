@@ -26,20 +26,22 @@ fc = "FACILITIES.Centerline"
 
 # loops through selected rows and swaps the values
 with arcpy.da.UpdateCursor(fc, fields) as cursor:
-    for row in cursor:
+	for row in cursor:
 		# update swaps
-        row[0], row[1] = row[1], row[0]
-        row[2], row[3] = row[3], row[2]
-        row[4], row[5] = row[5], row[4]
-        row[6], row[7] = row[7], row[6]
+		row[0], row[1] = row[1], row[0]
+		row[2], row[3] = row[3], row[2]
+		row[4], row[5] = row[5], row[4]
+		row[6], row[7] = row[7], row[6]
 		
 		# swap directions
 		if row[8] == 'F':
 			row[8] = 'R'
+			cursor.updateRow(row)
 		elif row[8] == 'R':
 			row[8] = 'F'
-
-        cursor.updateRow(row)
+			cursor.updateRow(row)
+		else:
+			cursor.updateRow(row)
 
 # Marked the discrepancy as done in the CENTERLINE_FLIPS tracking shapefile
 arcpy.CalculateField_management("CENTERLINE_FLIPS","FLIP",'1')
