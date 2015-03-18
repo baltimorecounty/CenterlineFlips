@@ -20,9 +20,10 @@ class SwapCenterlines(object):
 			fc = "FACILITIES.Centerline" # set the feature class to the SDE feature class name
 			fc_shp = "CENTERLINE_FLIPS" # feature class to calculate
 			field = "FLIP" # calc filed to change
-			desc = arcpy.Describe(fc_shp) # describe selection of fc_shape
-
-			if not desc.FIDSet  == '': # an fc_shp is selected
+			fc_desc = arcpy.Describe(fc) # describe selection of fc_shape
+			fc_shp_desc = arcpy.Describe(fc_shp) # describe selection of fc_shape
+			
+			if not fc_desc.FIDSet  == '' and fc_shp_desc == '': # an fc_shp is selected
 				# Marked the discrepancy as done in the CENTERLINE_FLIPS tracking shapefile
 				arcpy.CalculateField_management(fc_shp,field,'1')
 				
